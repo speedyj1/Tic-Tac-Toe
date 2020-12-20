@@ -9,6 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var gameStateLabel: UILabel!
+    @IBOutlet weak var gameStateNavBar: UINavigationBar!
+    @IBOutlet var gameBoardButtons: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,5 +22,13 @@ class ViewController: UIViewController {
         print("New Game")
     }
     
+    @IBAction func pressedGameBoardButton(_ sender: Any) {
+        let button = sender as! UIButton
+        print(button.tag)
+    }
+    
+    func updateView() {
+        
+    }
 }
 
